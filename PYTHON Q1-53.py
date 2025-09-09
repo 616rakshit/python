@@ -1,5 +1,5 @@
 # ==========================================================
-# Python Practice Programs (Q1 - Q40)
+# Python Practice Programs (Q1 - Q53)
 # With Full Questions + Author info
 # ==========================================================
 
@@ -45,9 +45,9 @@ print("This program is executed by Rakshit Jain (0231BCA210)")
 
 # Q6. Write python code to demonstrate input method.
 print("\nQ6:")
-# name = input("Enter your name: ")
-# age = int(input("Enter your age: "))
-# print(f"Hello {name}, you are {age} years old.")
+'''name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+#print(f"Hello {name}, you are {age} years old.")'''
 print("This program is executed by Rakshit Jain (0231BCA210)")
 
 # Q7. Write python code to demonstrate datatypes and variables.
@@ -98,11 +98,11 @@ print("This program is executed by Rakshit Jain (0231BCA210)")
 
 # Q12. Write python code to input name, class, roll no, age and print using formatted print method.
 print("\nQ12:")
-# name=input("Enter name: ")
-# cls=input("Enter class: ")
-# roll=int(input("Enter roll no: "))
-# age=int(input("Enter age: "))
-# print(f"Name:{name}, Class:{cls}, Roll:{roll}, Age:{age}")
+'''name=input("Enter name: ")
+cls=input("Enter class: ")
+roll=int(input("Enter roll no: "))
+age=int(input("Enter age: "))
+print(f"Name:{name}, Class:{cls}, Roll:{roll}, Age:{age}")'''
 print("This program is executed by Rakshit Jain (0231BCA210)")
 
 # Q13. Write python code to calculate your age on given date.
@@ -191,10 +191,23 @@ print("\nQ25:")
 for i in range(1,6): print("*"*i)
 print("This program is executed by Rakshit Jain (0231BCA210)")
 
-# Q26. Write a python code to demonstrate multiple inputs, space separated.
-print("\nQ26:")
-# a,b,c = input("Enter 3 values: ").split()
-# print(a,b,c)
+# Q26: Demonstrate multiple inputs separated by spaces
+
+# Take multiple inputs separated by spaces
+#inputs = input("Enter multiple values separated by spaces: ").split()
+
+# The inputs list contains strings, print them as is
+#print("Input values as strings:", inputs)
+
+# Convert inputs to integers if possible
+#int_inputs = list(map(int, inputs))
+
+#print("Input values as integers:", int_inputs)
+
+# Demonstrate accessing individual inputs
+#for i, val in enumerate(int_inputs, start=1):
+ #   print(f"Input {i}: {val}")
+
 print("This program is executed by Rakshit Jain (0231BCA210)")
 
 # Q27. Write a python code to demonstrate multiple inputs in a list.
@@ -300,38 +313,85 @@ else: print("Success:",x)
 finally: print("Finished")
 print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q41 write pyhton code to create & modify a list
+# Q41: Read content of a file using try, except and finally
+print("\nQ41:")
+filename = "example.txt"  # Specify your file name
+
+try:
+    f = open(filename, "r")
+    content = f.read()
+    print("File content:")
+    print(content)
+except FileNotFoundError:
+    print("The specified file does not exist.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    try:
+        f.close()
+        print("File closed successfully.")
+    except:
+        print("File was not opened, so cannot be closed.")
+print("This program is executed by Rakshit Jain (0231BCA210)")        
+
+#Q42 write pyhton code to create & modify a list
+print("\nQ42:")
 my_list= [1,2,3,4,5]
 my_list.append(6)
 my_list.insert(2,2.5)
 print(my_list)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q41 write pyhton code to create & modify a list
+#Q42 write pyhton code to create & modify a list
+print("\nQ42:")
 my_list= [1,2,3,4,5]
 my_list.append(6)
 my_list.insert(2,2.5)
 my_list.remove(4)
 print(my_list)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q42 write python code to demonstrate slicing of the list
+#Q43 write python code to demonstrate slicing of the list
+print("\nQ43:")
 first = my_list[0]
 last= my_list[-1]
 sub=my_list[1:4]
 print('first element',first)
 print('last element',last)
 print('sliced list',sub)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
+# Q44: Use list comprehensions
+print("\nQ44:")
+# Create a list of squares of numbers 0 to 9
+squares = [x ** 2 for x in range(10)]
+print("Squares:", squares)
 
-#Q42 write python code to create & access truple
+# Create a list of even numbers from 0 to 19
+evens = [x for x in range(20) if x % 2 == 0]
+print("Even numbers:", evens)
+
+# Create a list of uppercase letters from a given list
+letters = ['a', 'b', 'c', 'd']
+upper_letters = [ch.upper() for ch in letters]
+print("Uppercase letters:", upper_letters)
+print("This program is executed by Rakshit Jain (0231BCA210)")
+
+#Q45 write python code to create & access truple
+print("\nQ45:")
 mytuple=(1,2,3,4)
 print(mytuple[0])
 print(mytuple[-1])
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q43 write python code to create & access nested truple
+#Q46 write python code to create & access nested truple
+print("\nQ46:")
 nested=(1,(2,3),4)
 print(nested[1][0])
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q44 write python code to demonstrate set operations
+#Q47 write python code to demonstrate set operations
+print("\nQ47:")
 set1={1,2,3}
 set2={3,4,5}
 union=set1|set2
@@ -340,37 +400,50 @@ defference= set1-set2
 print(union)
 print(intersection)
 print(defference)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q45 write python code to create and modify a dictionary
+#Q48 write python code to create and modify a dictionary
+print("\nQ48:")
 mydict={'name':'Alce','age':25}
 mydict['age']=26
 mydict['city']='new york'
 print(mydict)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q46write python code to access and remove dictionary elements
+#Q49 write python code to access and remove dictionary elements
+print("\nQ49:")
 mydict= {'name':'bob','age':30,'job':'engineer'}
 name=mydict.get('name')
 mydict.pop('name')
 print(name)
 print(mydict)
-#Q47 write python code to iterate through dictionary items
+print("This program is executed by Rakshit Jain (0231BCA210)")
+
+#Q50 write python code to iterate through dictionary items
+print("\nQ50:")
 mydict={'a':1,'b':2,'c':3}
 for key, value in mydict.items():
     print(f'{key}:{value}')
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q48 wirte python code to use built-in iterators
+#Q51 wirte python code to use built-in iterators
+print("\nQ51:")
 mylist=[1,2,3,4]
 it=iter(mylist)
 print(next(it))
 print(next(it))
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q49 wirte pyhton code to use iterator in a loop
+#Q52 wirte pyhton code to use iterator in a loop
+print("\nQ52:")
 mylist=[1,2,3,4]
 it=iter(mylist)
 for item in it:
     print(item)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
-#Q50 wirte python code to create and use custom iterators
+#Q53 wirte python code to create and use custom iterators
+print("\nQ53:")
 class Reverse:
     def __init__(self, data):
         self.data = data
@@ -388,4 +461,5 @@ class Reverse:
 rev = Reverse('giraffe')
 for char in rev:
     print(char)
+print("This program is executed by Rakshit Jain (0231BCA210)")
 
